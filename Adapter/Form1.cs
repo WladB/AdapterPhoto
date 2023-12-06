@@ -43,10 +43,10 @@ namespace Adapter
 
         private void button2_Click(object sender, EventArgs e)
         {
+            openFileDialog1.ShowDialog();
             if (openFileDialog1.FileName != "openFileDialog1")
             {
-                openFileDialog1.ShowDialog();
-            JPEG jpg = new JpegAdapter(str);
+            JPEG jpg = new JpegAdapter(openFileDialog1.FileName);
             saveFileDialog1.ShowDialog();
               if (saveFileDialog1.FileName != "")
                 {
@@ -65,10 +65,10 @@ namespace Adapter
 
         private void button3_Click(object sender, EventArgs e)
         {
+            openFileDialog1.ShowDialog();
             if (openFileDialog1.FileName != "openFileDialog1")
             {
-                openFileDialog1.ShowDialog();
-            PNG png = new PngAdapter(str);
+            PNG png = new PngAdapter(openFileDialog1.FileName);
             saveFileDialog1.ShowDialog();
               if (saveFileDialog1.FileName != "")
                 {
